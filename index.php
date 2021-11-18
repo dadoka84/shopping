@@ -11,10 +11,12 @@
     
       <div class="stil">
       <h1>Shopping</h1>  
-      <hr>
+    
       
       <?php include 'controller.php';?>
-<?php include 'list.php';?></div>
+<?php include 'list.php';?>
+
+</div>
 
 	<script src="index.js"></script>
   </body>

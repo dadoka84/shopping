@@ -1,18 +1,49 @@
 body{
-    background: #333;
+    background: #fff;
+}
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }
+button
+{
+    background: blueviolet;
+    color: #fff !important;
+    padding: 10px 20px 10px 20px;
+    border-radius: 3px;
+    border-style: none;
+    margin-top: 20px;
+}
+button a{
+
+    color: #fff !important;
+
 }
 hr{
     color:#666;
 }
 h1{
 
-color: #fff;
+    color: blueviolet;
+    border-left: solid blueviolet 50px;
+    padding-left: 10px;
 
 }
 
 .stil
 {
-    background: #999;
+    color: blueviolet;
     margin: auto;
     width: 80%;
     padding: 10px;
@@ -30,6 +61,19 @@ background: #fff;
 border-radius: 10px;
 padding: 20px;
 margin: 10px;
+box-shadow: 3px 3px 8px #888888;
 
+}
+.cijena
+{
+    font-size: xx-large;
+color: blueviolet;
+
+}
+.naziv
+{
+color: gray;
+font-size: large;
+text-transform: uppercase;
 
 }
