@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    
-      <div class="stil">
+
+  <div class="header">
+  <h2>T-shirt shop</h2>
+  </div>
+  <div class="wrapper">
+     
       <h1>Shopping</h1>  
     
       
@@ -18,6 +22,10 @@
 
 </div>
 
-	<script src="index.js"></script>
+	
+    <div class="footer">
+  <h2>Sva prava zadržana | 2021</h2>
+  </div>
+
   </body>
 </html>

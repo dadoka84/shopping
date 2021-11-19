@@ -1,3 +1,6 @@
+<div class="stil">
+
+
 <?php
 $sql = "SELECT id, vrsta, boja, slika, velicina, cijena FROM Proizvodi";
 $result = $conn->query($sql);
@@ -13,3 +16,5 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
+
+</div>
