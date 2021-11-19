@@ -11,16 +11,17 @@
 
   <div class="header">
     <h2>T-shirt shop</h2>
+    <h2>CART</h2>
       </div>
     <ul>
-  <li><a class="active" href="index.php">Naslovna</a></li>
+    <li><a class="active" href="index.php">Naslovna</a></li>
   <li><a href="#info">Info</a></li>
   <li><a href="#kontakt">Kontakt</a></li>
   <li><a href="cart.php">Cart</a></li>
 </ul>
   <div class="wrapper">
      
-      <h1>Shopping</h1>  
+      <h1>Cart</h1>  
     
       
       <?php include 'controller.php';?>

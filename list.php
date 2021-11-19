@@ -9,7 +9,7 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
   
-    echo '<div class="proizvod">', '<img src='.$row["slika"].' width="100%" height="200px">', '<br>' , '<div class="naziv">'. $row["boja"]," " . $row["velicina"]." " . $row["vrsta"]. "</div>  " , '<div class="cijena">'. $row["cijena"].'KM</div>','<br><button><a href="index.php">Link</a></button>', '</div>';
+    echo '<div class="proizvod">', '<img src='.$row["slika"].' width="100%" height="200px">', '<br>' , '<div class="naziv">'. $row["boja"]," " . $row["velicina"]." " . $row["vrsta"]. "</div>  " , '<div class="cijena">'. $row["cijena"].'KM</div>','<br><button class="dugme"><a href="index.php">U košaricu</a></button><button><a href="index.php">Kupi proizvod</a></button>', '</div>';
   }
 } else {
   echo "0 results";

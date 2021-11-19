@@ -33,16 +33,75 @@ a:link {
     padding-left:  10px; /* 3 */
     margin-bottom: -200px;
   }
-  .header {
-    padding: 100px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-    font-size: 30px;
-    background-image: url("images/bg.jpg");
-  }
+  @media only screen and (max-width: 600px) {
+      
+        .header {
+            padding: 100px 100px 130px 100px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            text-transform: uppercase;
+            background-image: url("images/bgmali.jpg");
+          background-repeat: no-repeat;
+          background-size: auto;
+             background-position: top center;
+          }
 
-  .footer {
+    }
+
+  @media only screen and (min-width: 600px) {
+    .header {
+        padding: 100px 100px 130px 100px;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        text-transform: uppercase;
+        background-image: url("images/bgmali.jpg");
+      background-repeat: no-repeat;
+      background-size: auto;
+         background-position: top center;
+      }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .header {
+        padding: 100px 100px 130px 100px;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        text-transform: uppercase;
+        background-image: url("images/bgsrednji.jpg");
+      background-repeat: no-repeat;
+      background-size: auto;
+         background-position: top center;
+      }
+
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .header {
+        padding: 100px 100px 130px 100px;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        text-transform: uppercase;
+        background-image: url("images/bg.jpg");
+      background-repeat: no-repeat;
+      background-size: auto;
+         background-position: top center;
+      }
+
+
+}
+
+
+
+
+.footer {
     padding: 10px;
     text-align: center;
     background: #2b2b2b;
@@ -51,9 +110,10 @@ a:link {
     position: fixed;
     right: 0;
     bottom: 0;
-    width: 30%;
+    width: 18%;
     margin-top: 50px;
     border-radius: 10px 0px 0px 0px;
+     opacity: 0.8;
   }
 button
 {
@@ -62,7 +122,36 @@ button
     padding: 10px 20px 10px 20px;
     border-radius: 3px;
     border-style: none;
-    margin-top: 20px;
+    margin-top: 5px;
+  width: 100%;
+}
+button:hover
+{
+    background: #67b9de;
+    color: #fff !important;
+    padding: 10px 20px 10px 20px;
+    border-radius: 3px;
+    border-style: none;
+    margin-top: 5px;
+}
+.dugme
+{
+    background: #bababa;
+    color: #fff !important;
+    padding: 10px 20px 10px 20px;
+    border-radius: 3px;
+    border-style: none;
+    margin-top: 5px;
+  width: 100%;
+}
+.dugme:hover
+{
+    background: #333;
+    color: #fff !important;
+    padding: 10px 20px 10px 20px;
+    border-radius: 3px;
+    border-style: none;
+    margin-top: 5px;
 }
 button a{
 
@@ -79,6 +168,16 @@ h1{
     padding-left: 10px;
 
 }
+h2{
+animation-name: example;
+  animation-duration: 2s;
+   animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes example {
+  from {color: white;}
+  to {color: #e6b5bb;}
+}
 
 .stil
 {
@@ -91,29 +190,120 @@ margin-bottom: 50px;
 height: 80vh;
 
 }
-.proizvod
+
+@media only screen and (max-width: 600px) {.proizvod
+    {
+    width: 80%;
+    display: inline;
+    float: left;
+    position: relative;
+    background: #fff;
+    border-radius: 10px 0px 10px 0px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 3px 3px 8px #888888;
+      }
+    }
+
+@media only screen and (min-width: 600px) {
+  
+  .proizvod
+{
+width: 80%;
+display: inline;
+float: left;
+position: relative;
+background: #fff;
+border-radius: 10px 0px 10px 0px;
+padding: 20px;
+margin: 10px;
+box-shadow: 3px 3px 8px #888888;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+   .proizvod
+{
+width: 40%;
+display: inline;
+float: left;
+position: relative;
+background: #fff;
+border-radius: 10px 0px 10px 0px;
+padding: 20px;
+margin: 10px;
+box-shadow: 3px 3px 8px #888888;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .proizvod
 {
 width: 25%;
 display: inline;
 float: left;
 position: relative;
 background: #fff;
-border-radius: 10px;
+border-radius: 10px 0px 10px 0px;
 padding: 20px;
 margin: 10px;
 box-shadow: 3px 3px 8px #888888;
-
+  }
 }
-.cijena
-{
-    font-size: xx-large;
-color: #e6b5bb;
 
-}
 .naziv
 {
 color: gray;
 font-size: large;
 text-transform: uppercase;
 
+}
+  
+  .cijena {
+  animation: blinker 2s linear infinite;
+    font-size: xx-large;
+color: #e6b5bb;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.proizvod:hover
+{
+box-shadow: 3px 3px 12px #4d4d4d;
+  }
+ul {
+   margin-right: auto; /* 1 */
+    margin-left:  auto;
+  margin-top:  0px;
+  width: 100%;
+  list-style-type: none;
+
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+    font-size: medium;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+ul > li:last-child
+{
+    float:right;
 }
