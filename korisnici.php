@@ -21,7 +21,8 @@
 </ul>
   <div class="wrapper">
      
-      <h1>Cart</h1>  
+      <h1>Korisnici</h1>  
+      <button> <a href="insert.php">Nazad</a></button>
     
       
       <?php include 'controller.php';?>
@@ -29,14 +30,14 @@
 
 
 <?php
-$sql = "SELECT id, proizvod, cijena, kolicina,  FROM carttbl";
+$sql = "SELECT id, ime, prezime, email, slika, adresa FROM tblusers";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
   
-    echo '<div class="proizvod"><h2>Proizvodi</h2>'. $row["proizvod"],'<br>'. $row["cijena"],'<br>'. $row["kolicina"], '</div>';
+    echo '<div class="proizvod"><h2>Korisnik</h2><img src='.$row["slika"],' width="100%" height="200px">'. $row["ime"],'<br>'. $row["prezime"],'<br>'. $row["email"],'<br>'. $row["adresa"], '</div>';
   }
 } else {
   echo "0 results";
