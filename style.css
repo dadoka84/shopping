@@ -251,6 +251,77 @@ box-shadow: 3px 3px 8px #888888;
   }
 }
 
+
+@media only screen and (max-width: 600px) {.proizvodveliki
+  {
+  width: 100%;
+  display: inline;
+  float: left;
+  position: relative;
+  background: #fff;
+  border-radius: 10px 0px 10px 0px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 3px 3px 8px #888888;
+    }
+  }
+
+@media only screen and (min-width: 600px) {
+
+.proizvodveliki
+{
+width: 100%;
+display: inline;
+float: left;
+position: relative;
+background: #fff;
+border-radius: 10px 0px 10px 0px;
+padding: 20px;
+margin: 10px;
+box-shadow: 3px 3px 8px #888888;
+}
+}
+
+@media only screen and (min-width: 768px) {
+ .proizvodveliki
+{
+width: 100%;
+display: inline;
+float: left;
+position: relative;
+background: #fff;
+border-radius: 10px 0px 10px 0px;
+padding: 20px;
+margin: 10px;
+box-shadow: 3px 3px 8px #888888;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+.proizvodveliki
+{
+width: 100%;
+display: inline;
+float: left;
+position: relative;
+background: #fff;
+border-radius: 10px 0px 10px 0px;
+padding: 20px;
+margin: 10px;
+box-shadow: 3px 3px 8px #888888;
+}
+}
+
+.opis
+{
+
+  width: 100%;
+  padding: 40px;
+  color: darkgray;
+  font-size: small;
+
+}
+
 .naziv
 {
 color: gray;
@@ -402,3 +473,9 @@ input[type="number"] {
 .signup-form form a:hover {
 	text-decoration: underline;
 }  
+
+form {
+ 
+  padding: 10px 10px 10px 0px;
+  color: grey;
+}
