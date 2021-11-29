@@ -14,7 +14,6 @@
       </div>
     <ul>
   <li><a class="active" href="index.php">Naslovna</a></li>
-  <li><a href="#info">Info</a></li>
   <li><a href="insert.php">Registracija</a></li>
   <li><a href="#kontakt">Kontakt</a></li>
   <li><a href="cart.php">Cart</a></li>

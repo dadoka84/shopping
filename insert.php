@@ -42,8 +42,7 @@ if(isset($_POST['submit']))
       </div>
     <ul>
   <li><a class="active" href="index.php">Naslovna</a></li>
-  <li><a href="#info">Info</a></li>
-  <li><a href="insert.php">Registracija</a></li>
+   <li><a href="insert.php">Registracija</a></li>
   <li><a href="#kontakt">Kontakt</a></li>
   <li><a href="cart.php">Cart</a></li>
 </ul>
@@ -57,19 +56,19 @@ if(isset($_POST['submit']))
 		<p class="hint-text">Ispunite formular!</p>
         <div class="form-group">
 			<div class="row">
-				<div class="col"><input type="text" class="form-control" name="fname" placeholder="First Name" required="true"></div>
-				<div class="col"><input type="text" class="form-control" name="lname" placeholder="Last Name" required="true"></div>
+				<div class="col"><input type="text" class="form-control" name="fname" placeholder="Ime" required="true"></div>
+				<div class="col"><input type="text" class="form-control" name="lname" placeholder="Prezime" required="true"></div>
 			</div>        	
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" name="contactno" placeholder="Enter your Mobile Number" required="true" maxlength="10" pattern="[0-9]+">
+            <input type="text" class="form-control" name="contactno" placeholder="Unesite broj mobitela" required="true" maxlength="10" pattern="[0-9]+">
         </div>
         <div class="form-group">
-        	<input type="email" class="form-control" name="email" placeholder="Enter your Email id" required="true">
+        	<input type="email" class="form-control" name="email" placeholder="Unesite Email" required="true">
         </div>
 		
 		<div class="form-group">
-            <textarea class="form-control" name="address" placeholder="Enter Your Address" required="true"></textarea>
+            <textarea class="form-control" name="address" placeholder="Unesite adresu" required="true"></textarea>
         </div>        
       
 		<div class="form-group">
