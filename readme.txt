@@ -1,3 +1,5 @@
+*** Zahtjevi***
+
 Kreirati web aplikaciju za prodaju odjevnih predmeta sa printom slike po zelji. 
 
 Applikacija treba da omoguci da korisnik u 3 koraka unese podatke o prilagodjenom proizvodu koji zeli da kupi te da izvrsi kupovinu.
