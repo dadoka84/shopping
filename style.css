@@ -178,7 +178,13 @@ animation-name: example;
   from {color: white;}
   to {color: #e6b5bb;}
 }
+h3{
 
+  color: #217ca0;
+  font-size: xx-large;
+
+
+}
 .stil
 {
     color: blueviolet;
@@ -312,7 +318,7 @@ box-shadow: 3px 3px 8px #888888;
 }
 }
 
-.opis
+.opis, label
 {
 
     color: darkgray;
@@ -497,4 +503,30 @@ input[type="file" i] {
   color: #666;
   background: #e7e7e7;
   padding: 5px;
+}
+select
+
+{
+color: #666;
+  background: #e7e7e7;
+  padding: 5px;
+  border-radius: 3px;
+  border-color: #969fa4;
+}
+input[type="text" i], input[type="email"], textarea
+{
+  color: #666;
+    background: #e7e7e7;
+    padding: 0 0 0 10px ;
+    border-radius: 3px;
+    border-color: #969fa4;
+    margin-bottom: 2px;
+  }
+  
+hr{
+background:  rgb(231, 231, 231);
+padding: 2px;
+border-style: none;
+margin-bottom: 20px;
+
 }
