@@ -65,7 +65,7 @@ $conn->close();
   <input type="file" name="fileToUpload" id="fileToUpload">
   <input type="submit" value="Posalji" name="submit">
 </form> <hr>
-<h3>Ukupna cijena je: '. finalnaCijena(2,3,4,2) ,'KM</h3><br>
+<h3>Ukupna cijena je: <?php echo finalnaCijena(2,3,4,2) ?>KM</h3><br>
     <div class="container"><button class="dugme"><a href="index.php">U košaricu</a></button><button><a href="proizvod.php?id='.$row["id"],'">Personaliziraj proizvod</a></button></div>
     
     <br><hr><strong>Tehnologija izrade</strong><br><br><span class="opis">Štampamo tzv DTG  tehnologijom (Direct To Garment) direktno na tkaninu. Koristimo jako kvaltetne majice FRUIT OF THE LOOM .  Odaberite model, veličinu i boju, te dodajte sliku u polje ne dnu koje je predviđeno za "UPLOAD"    
