@@ -24,10 +24,12 @@ if ($result->num_rows > 0) {
   <input type="submit" value="Posalji" name="submit">
 </form> 
     
-    <div class="container"><button class="dugme"><a href="index.php">U košaricu</a></button><button><a href="proizvod.php?id='.$row["id"],'">Personaliziraj proizvod</a></button></div>', '<br/><br><h2>Tehnologija izrade</h2><span class="opis">Štampamo tzv DTG  tehnologijom (Direct To Garment) direktno na tkaninu. Koristimo jako kvaltetne majice FRUIT OF THE LOOM .  Odaberite model, veličinu i boju, te dodajte sliku u polje ne dnu koje je predviđeno za "UPLOAD"    
+    <div class="container"><button class="dugme"><a href="index.php">U košaricu</a></button><button><a href="proizvod.php?id='.$row["id"],'">Personaliziraj proizvod</a></button></div>
+    <h2>Ukupna cijena je: </h2>'. izracunCijene(2,3,4) ,'KM<br> 
+    <br><h2>Tehnologija izrade</h2><span class="opis">Štampamo tzv DTG  tehnologijom (Direct To Garment) direktno na tkaninu. Koristimo jako kvaltetne majice FRUIT OF THE LOOM .  Odaberite model, veličinu i boju, te dodajte sliku u polje ne dnu koje je predviđeno za "UPLOAD"    
     Nakon odabrane količine i potvrde vaše narudžbe, pristupit ćemo obradi. Kada se narudžba obradi i pregleda vaša slika, majica se pušta u štampu.    
     Obično je za izradu i slanje majice na adresu potrebno 24 sata, tako da majicu možete očekivati na vašoj adresi u roku od dva radna dana od dana narudžbe.</span>
-     <div>'. izracunCijene() ,' </div>
+
     </div>';
   }
 } else {
