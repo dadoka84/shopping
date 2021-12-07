@@ -10,7 +10,7 @@
 if(isset($_POST['submit']))
   {
   	//getting the post values
-    $cartId=7;
+  
     $personId=intval($_GET['id']);
     $productId=intval($_GET['id']);
     $boja=$_POST['boja'];
@@ -19,7 +19,7 @@ if(isset($_POST['submit']))
     $proizvod=$_POST['proizvod'];
    
   // Query for data insertion
-  $query=mysqli_query($conn, "insert into tblselected( cartId, personId, productId, boja, velicina, kolicina, proizvod ) value('$cartId','$personId','$productId','$boja', '$velicina', '$kolicina', '$proizvod' )");
+  $query=mysqli_query($conn, "insert into tblselected(personId, productId, boja, velicina, kolicina, proizvod ) value('$personId','$productId','$boja', '$velicina', '$kolicina', '$proizvod' )");
   if ($query) {
   echo "<script>alert('Uspjesno uneseno');</script>";
   echo "<script type='text/javascript'> document.location ='index.php'; </script>";
