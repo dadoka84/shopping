@@ -5,13 +5,36 @@
 
 
 <div class="stil">
-
+<?php 
+//Database Connection file
+if(isset($_POST['submit']))
+  {
+  	//getting the post values
+    $cartId=7;
+    $personId=intval($_GET['id']);
+    $productId=intval($_GET['id']);
+    $boja=$_POST['boja'];
+    $velicina=$_POST['velicina'];
+    $kolicina=$_POST['kolicina'];
+    $proizvod=$_POST['proizvod'];
+   
+  // Query for data insertion
+  $query=mysqli_query($conn, "insert into tblselected( cartId, personId, productId, boja, velicina, kolicina, proizvod ) value('$cartId','$personId','$productId','$boja', '$velicina', '$kolicina', '$proizvod' )");
+  if ($query) {
+  echo "<script>alert('Uspjesno uneseno');</script>";
+  echo "<script type='text/javascript'> document.location ='index.php'; </script>";
+  }
+  else
+    {
+      echo "<script>alert('Doslo je do greske, pokusajte ponovo!');</script>";
+    }
+}
+?>
 
 <?php
 $id = intval($_GET['id']);
 $sql = "SELECT vrsta, boja, slika, velicina, cijena FROM Proizvodi WHERE id=$id";
 $result = $conn->query($sql);
-$kolicina = $_POST["output"];
 
 if ($result->num_rows > 0) {
   // output data of each row
@@ -27,23 +50,24 @@ $conn->close();
 ?>
 
     <h3>Korak 1</h3>
+    <form method="post">
     <label for="proizvod" class="text">Izaberite proizvod:</label>
 <select id="proizvod" name="proizvod">
-  <option value="kratka">Majica kratkih rukava</option>s
-  <option value="duga">Majica dugih rukava</option>
-  <option value="dukserica">Dukserica</option>
-  <option value="kacket">Kačket</option>
+  <option value="Majica kratkih rukava">Majica kratkih rukava</option>s
+  <option value="Majica dugih rukava">Majica dugih rukava</option>
+  <option value="Dukserica">Dukserica</option>
+  <option value="Kačket">Kačket</option>
 </select><br>    <br>
 
 <label for="boja" class="text">Izaberite boju:</label>
-<select id="proizvod" name="boja">
-  <option value="<?php $crna ?>">Crna</option>
-  <option value="<?php $bijela ?>">Bijela</option>
-  <option value="<?php $plava ?>">Plava</option>
-  <option value="<?php $zuta ?>">Žuta</option>
-  <option value="<?php $crvena ?>">Crvena</option>
-  <option value="<?php $zelena ?>">Zelena</option>
-  <option value="<?php $roza ?>">Roza</option>
+<select id="boja" name="boja">
+  <option value="crna">Crna</option>
+  <option value="bijela">Bijela</option>
+  <option value="plava">Plava</option>
+  <option value="zuta">Žuta</option>
+  <option value="crvena">Crvena</option>
+  <option value="zelena">Zelena</option>
+  <option value="roza">Roza</option>
 </select><br>    <br>
 <hr>
 <h3>Korak 2</h3>
@@ -58,8 +82,17 @@ $conn->close();
 </select><br> <br> <hr>
 <h3>Korak 3</h3>
     <span class="text">Količina</span> 
-    <input type="range" value="1" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
-<output>1</output>
+    <!-- input slider
+    <input type="range" value="1" min="1" max="100" oninput="this.nextElementSibling.value = this.value" name="kolicina">
+<output>1</output> -->
+<input type="number" id="kolicina" name="kolicina"
+       min="1" max="100">
+
+<br>
+<input type="submit" value="Posalji" name="submit">
+</form>
+<hr>
+
     <form action="upload.php" method="post" enctype="multipart/form-data">
   Izaberi sliku za upload:
   <input type="file" name="fileToUpload" id="fileToUpload">
