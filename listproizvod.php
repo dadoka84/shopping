@@ -11,7 +11,7 @@ if(isset($_POST['submit']))
   {
   	//getting the post values
   
-    $personId=intval($_GET['id']);
+    $personId=intval($_GET['personId']);
     $productId=intval($_GET['id']);
     $boja=$_POST['boja'];
     $velicina=$_POST['velicina'];
@@ -33,14 +33,15 @@ if(isset($_POST['submit']))
 
 <?php
 $id = intval($_GET['id']);
-$sql = "SELECT vrsta, boja, slika, velicina, cijena FROM Proizvodi WHERE id=$id";
+$personId=intval($_GET['personId']);
+$sql = "SELECT boja, velicina, kolicina, proizvod FROM tblselected WHERE personId=$personId";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
   
-    echo '<div class="proizvodveliki">', '<img src='.$row["slika"].' width="30%" height="200px">', '<br>' , '<div class="naziv">'. $row["boja"]," " . $row["velicina"]." " . $row["vrsta"]. "</div>  " , '<div class="cijena">Već od '. $row["cijena"].'KM</div>','<br><hr>'
+    echo '<div class="tblselected">', '<img src='.$row["slika"].' width="30%" height="200px">', '<br>' , '<div class="naziv">'. $row["boja"]," " . $row["velicina"]." " . $row["vrsta"]. "</div>  " , '<div class="cijena">Količina '. $row["kolicina"].' komada.</div></div>'
     ;
   }
 } else {

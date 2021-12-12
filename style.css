@@ -530,3 +530,13 @@ border-style: none;
 margin-bottom: 20px;
 
 }
+.tblselected
+{
+width: 90%;
+background: #fff;
+position: relative;
+border-radius: 10px 0px 10px 0px;
+padding: 20px;
+margin: 10px;
+box-shadow: 3px 3px 8px #888888;
+}
