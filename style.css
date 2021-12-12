@@ -328,7 +328,7 @@ box-shadow: 3px 3px 8px #888888;
 
 .naziv
 {
-color: gray;
+  color: #217ca0;
 font-size: large;
 text-transform: uppercase;
 
@@ -338,6 +338,11 @@ text-transform: uppercase;
   animation: blinker 2s linear infinite;
     font-size: xx-large;
 color: #e6b5bb;
+}
+.kolicina {
+  font-size: normal !important;
+text-transform: none !important;
+  color: #494949;
 }
 
 @keyframes blinker {

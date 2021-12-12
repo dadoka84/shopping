@@ -16,6 +16,7 @@
   <li><a class="active" href="index.php">Naslovna</a></li>
    <li><a href="insert.php">Registracija</a></li>
   <li><a href="#kontakt">Kontakt</a></li>
+  <li><a href="login.php">Login</a></li>
   <li><a href="cart.php">Cart</a></li>
 </ul>
   <div class="wrapper">

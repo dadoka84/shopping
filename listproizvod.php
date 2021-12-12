@@ -22,7 +22,7 @@ if(isset($_POST['submit']))
   $query=mysqli_query($conn, "insert into tblselected(personId, productId, boja, velicina, kolicina, proizvod ) value('$personId','$productId','$boja', '$velicina', '$kolicina', '$proizvod' )");
   if ($query) {
   echo "<script>alert('Uspjesno uneseno');</script>";
-  echo "<script type='text/javascript'> document.location ='index.php'; </script>";
+  echo "<script type='text/javascript'> document.location ='proizvod.php'; </script>";
   }
   else
     {
@@ -30,7 +30,7 @@ if(isset($_POST['submit']))
     }
 }
 ?>
-
+<h2>Dosadašnje narudžbe korisnika</h2>
 <?php
 $id = intval($_GET['id']);
 $personId=intval($_GET['personId']);
@@ -41,7 +41,7 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
   
-    echo '<div class="tblselected">', '<img src='.$row["slika"].' width="30%" height="200px">', '<br>' , '<div class="naziv">'. $row["boja"]," " . $row["velicina"]." " . $row["vrsta"]. "</div>  " , '<div class="cijena">Količina '. $row["kolicina"].' komada.</div></div>'
+    echo '<div class="tblselected"><div class="naziv">Proizvod: '. $row["proizvod"],'<br><span class="kolicina"> Boja: '. $row["boja"],"<br> Veličina:  " . $row["velicina"]." " . $row["vrsta"]. "</span></div>  " , '<div class="kolicina">Naručena količina: '. $row["kolicina"].' komada.</div></div>'
     ;
   }
 } else {
@@ -50,6 +50,8 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
+<hr>
+<h1>Nova narudžba</h1>
     <h3>Korak 1</h3>
     <form method="post">
     <label for="proizvod" class="text">Izaberite proizvod:</label>
