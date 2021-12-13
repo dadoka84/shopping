@@ -33,15 +33,16 @@ if(isset($_POST['submit']))
 <h2>Dosadašnje narudžbe korisnika</h2>
 <?php
 $id = intval($_GET['id']);
+$cartId=intval($_GET['cartId']);
 $personId=intval($_GET['personId']);
-$sql = "SELECT boja, velicina, kolicina, proizvod FROM tblselected WHERE personId=$personId";
+$sql = "SELECT cartId, boja, velicina, kolicina, proizvod FROM tblselected WHERE personId=$personId";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
   
-    echo '<div class="tblselected"><div class="naziv">Proizvod: '. $row["proizvod"],'<br><span class="kolicina"> Boja: '. $row["boja"],"<br> Veličina:  " . $row["velicina"]." " . $row["vrsta"]. "</span></div>  " , '<div class="kolicina">Naručena količina: '. $row["kolicina"].' komada.</div></div>'
+    echo '<div class="tblselected"><div class="naziv">Proizvod: '. $row["proizvod"],'<br><span class="kolicina"> Boja: '. $row["boja"],"<br> Veličina:  " . $row["velicina"]." " . $row["vrsta"]. "</span></div>  " , '<div class="kolicina">Naručena količina: '. $row["kolicina"].' komada.</div><div class="izbrisi"><a href="proizvod.php">Izbrisi</a></div></div>'
     ;
   }
 } else {
