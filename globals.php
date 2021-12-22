@@ -1,13 +1,19 @@
 <?php
 
+#Artikl
+$Majica_kratkih_rukava = 10;
+$Majica_dugih_rukava = 25;
+$Dukserica = 45;
+$Kacket = 15;
+
 # Boje artikala
-$crna = 7;
-$bijela = 8;
-$plava = 8;
-$zuta = 6;
-$crvena = 9;
-$zelena = 7;
-$roza = 12;
+$crna = 2;
+$bijela = 1;
+$plava = 3;
+$zuta = 2;
+$crvena = 4;
+$zelena = 2;
+$roza = 5;
 
 # Veličine artikala
 $s = 1;
